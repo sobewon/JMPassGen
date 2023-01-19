@@ -20,27 +20,21 @@ function generatePassword() {
   // if statements to combine all wanted characters into a single string
   if (lower === true) {
     charsAll = charsL
-    console.log("lowers")
   }
   if (upper === true) {
     charsAll = charsAll + charsU
-    console.log("uppers")
   }
   if (numb === true) {
     charsAll = charsAll + numbers
-    console.log("numbers")
   }
   if (special === true) {
     charsAll = charsAll + charsS
-    console.log("spec")
   }
-
+  // for loop creates 1 character for the password with each loop
   for (var i=0; i < passLength; i++) {
     pass = pass + charsAll[Math.floor(Math.random() * charsAll.length)]
   }
-  console.log(pass)
   return pass
-  
 }
 
 // Get references to the #generate element
